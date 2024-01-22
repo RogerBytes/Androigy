@@ -1,0 +1,151 @@
+{
+  "title": "MiXplorer",
+  "package": "com.mixplorer",
+  "date": "10\/01\/2024 18:15:39",
+  "type": 0,
+  "db": {
+    "uris": [
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0\/Download\/Vidéos",
+        "title": "Vidéos",
+        "user": "",
+        "secret": "",
+        "properties": "##"
+      },
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0\/Download\/Téléchargements",
+        "title": "Téléchargements",
+        "user": "",
+        "secret": "",
+        "properties": "##"
+      },
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0\/Download\/Musique",
+        "title": "Musique",
+        "user": "",
+        "secret": "",
+        "properties": "##"
+      },
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0\/Download\/Images",
+        "title": "Images",
+        "user": "",
+        "secret": "",
+        "properties": "##"
+      },
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0\/Download\/Documents",
+        "title": "Documents",
+        "user": "",
+        "secret": "",
+        "properties": "##"
+      },
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0",
+        "title": "Storage",
+        "user": "",
+        "secret": "",
+        "properties": "##"
+      },
+      {
+        "pid": 14,
+        "uri": "\/storage\/emulated\/0\/Download",
+        "title": "Home",
+        "user": "",
+        "secret": "",
+        "properties": "##"
+      },
+      {
+        "pid": 1,
+        "uri": "\/storage\/emulated\/0\/Download",
+        "title": "",
+        "user": "",
+        "secret": "",
+        "properties": "##zqHeuRcSpVEdreeinXOoFw"
+      }
+    ],
+    "packages": [
+      {
+        "extension": "txt:1481493647",
+        "package": "com.mixplorer",
+        "classname": "com.mixplorer.activities.TextEditorActivity"
+      },
+      {
+        "extension": "pdf:1481493647",
+        "package": "com.gitlab.mudlej.MjPdfReader",
+        "classname": "com.gitlab.mudlej.MjPdfReader.ui.main.MainActivity"
+      },
+      {
+        "extension": "apk:1481493647",
+        "package": "com.android.packageinstaller",
+        "classname": "com.android.packageinstaller.InstallStart"
+      }
+    ]
+  },
+  "pref": {
+    "main": {
+      "custom_key_last_path": "\/storage\/emulated\/0\/Notifications",
+      "can_trash": false,
+      "custom_key_DOC_TREE_URIS": "-1545938195:\/storage\/emulated\/0\/Android\/data\/com.kiwibrowser.browser|-1851947685:\/storage\/emulated\/0\/Android\/data\/com.vivaldi.browser|-1119963933:\/storage\/emulated\/0\/Android\/data\/com.menny.android.anysoftkeyboard|498059367:\/storage\/emulated\/0\/Android\/data\/org.fdroid.fdroid|-1813008455:\/storage\/emulated\/0\/Android\/data\/net.osmand.plus|-1741500477:\/storage\/emulated\/0\/Android\/data\/com.fsck.k9|",
+      "saved_customized": "MiX Gray",
+      "code_editor": "encoding=\nwrap=false\nfontsize=39\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=true\nfullscreen=false\nhighlight_old=\nspell_check=false\nno_keyboard=false\nsaved_offs=c6f4b9e8:10\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false",
+      "custom_otg": true,
+      "custom_key_increment_num_format": " (%01d)",
+      "text_editor": "encoding=\nwrap=true\nfontsize=39\nline_numbers=true\nhighlight=\nauto_indent=true\neditor_mode=0\nfull_view_size=0\nchars_view=true\nfullscreen=false\nhighlight_old=Extension\nspell_check=false\nno_keyboard=false\nsaved_offs=64c2d00f:502\nauto_complete=false\nstart_with_keyboard=true\nstart_at_end=false\ntab_space=false",
+      "custom_key_PERM_VIEW_REM_KEY": "1",
+      "custom_key_NEW_FILE": "0",
+      "custom_key_AGREE_PRIVACY": "true",
+      "RADIO_DROP_FILE": 37538340,
+      "drawer_options": "0|0|0|0|1|1|0|0|0|0",
+      "custom_key_increment_num_prefix": "false",
+      "custom_key_QUERY_PKG_LIST_REM_KEY": "1",
+      "custom_key_AUTO_TASKS": "",
+      "RADIO_RENAME_FILE": -1910303912,
+      "folders_app_icon": "",
+      "default_locale": "fr",
+      "custom_key_CHROMA": "xxxxx",
+      "drawer_mode": 0
+    },
+    "skins": {
+      "MiX Gray": "#cQK69eoVgupEskHCt57_89NgSzNFk8MBuvNgX7h-4w0FwG4VbAHcHlEGlIBsyM_9Y16DiluoMUrhmh7NMeL58sqnhOx8Ixi7XGQB222BipbnnGz10ClTJgx7DAiucD6lfcEIyvmNYZ3-aYc4moCSm2NwkOi30R7FZQD0fanEqAAPygsaqvuQncsQN7j0zkJOt88y9L7Zyf_htFqEtLY3vb6h3jsobo92mDNASBJ5RYtucCr5S8cMNMERS8JmA3bz5LTyNLO68aWu_UrAw8RTu4OZJL2lJOfY0rdb5Bf5iR50cHaAmJWM8GwO2_NRSTM6dYXH8xzvDhw8pElp-0hkci6TAk8qvI5gcRPfbDSkdEjmUImRguNcRf4KZHleNLNL_PMFGXGdnrgSvQGzN6HXP73WdaEIjgIHuz_R_deBAs6N5Vz8W-JbTg3_BA3oNAglv6rGbvhaw9jv3TTjPE5xXkUliWeH-UdrGuJP4RwfHSR1bvY3znwenJEyAqRdYQvaFcfomDsvJ15e8kefkVipMrO0OIXwnzUEq_yZxIwM-YYtXjDnNI2AodnuF6QxC4yBBn0GExap71JEa2EwlCrrUfiqBtdGDAQUep8ZT-OyBI5l52cQNqCT0yq-ggR1qWnxIF5AbzjXIVmazPFYvDR5nhKCAUGROXXmvN6R5XohFTi5b5HEFQes-xKipQirXxndU5DGnw3lv6420kzgYmmd39oKEr2A6TUPiamfnE3rTtpOALpFK3PTNnaFOOAi29Px2KrpDqO-481oh6SCkWu0HH0ZmYOoJzY6pZ5OSkTuaKl41YnBuGbuesM7FJjeWntS-S7s8hHzF68jMB6uYnUFFcsMDM9gJ7GfQlhO-Zf7YF86JffuO9wl_pF3r363BYFQE4nyrlQWnDPoEJSik54jkR0gru6I9X9rYfJkw3zlKo9vnCfPvCgVVoLtZXSSScF-Hy9lU9zp-1ikUeihkmZ3Bw"
+    },
+    "servers": {
+      "sftpserver_ssl_mode": "0",
+      "ftpserver_index": "",
+      "sftpserver_accounts": "qiQblTeU4rPt876mltLWbWQn2Xt7pfLcCI2PnMT9__covG9z1ueEhOSgKnFlpTWRf8zfuxYMh8FJkgAsdimbvE-vpGyu17IiM4US-d6279c|",
+      "sftpserver_port": "",
+      "sftpserver_index": "",
+      "ftpserver_ip": "192.168.1.11",
+      "ftpserver_ssl_mode": "1",
+      "ftpserver_port": "",
+      "ftpserver_accounts": "qiQblTeU4rPt876mltLWbWQn2Xt7pfLcCI2PnMT9__covG9z1ueEhOSgKnFlpTWRf8zfuxYMh8FJkgAsdimbvE-vpGyu17IiM4US-d6279c|",
+      "sftpserver_timeout": "300",
+      "sftpserver_custom_key": "",
+      "ftpserver_tls": "false",
+      "sftpserver_ip_name": "wlan0",
+      "sftpserver_auth": "0",
+      "ftpserver_auth": "0",
+      "sftpserver_ip": "192.168.1.11",
+      "ftpserver_ip_name": "wlan0",
+      "ftpserver_timeout": "300",
+      "sftpserver_start_on_boot": "false",
+      "ftpserver_start_on_boot": "false",
+      "ftpserver_custom_key": "",
+      "sftpserver_tls": "false"
+    },
+    "home": [
+      {
+        "p": "\/data\/user\/0\/com.mixplorer\/home\/Internal storage.lnk",
+        "l": "\/storage\/emulated\/0",
+        "n": "Internal storage",
+        "d": true
+      }
+    ]
+  }
+}

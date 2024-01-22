@@ -1,0 +1,111 @@
+
+.     	    											[Suite Applicative] Alienage Suite
+
+------------------------------------------------------
+
+	Préambule
+	_________
+
+Bonjour,
+Voici une suite applicative avec une installation semi-automatisée, c'est ce que j'utilise pour moi et mes proches.
+La suite est pensée pour une rom Lineage OS, mais peut être utilisé avec n'importe quelle rom (stock ou custom).
+
+
+------------------------------------------------------
+
+
+
+	Index
+	_____
+
+    I/ Installer les applications
+   II/ Appareil non reconnu sur ordinateur (facultatif)
+
+
+
+------------------------------------------------------
+
+    I/ Installer les applications
+	_____________________________
+Désactiver les applications :
+Appareil photo
+F-Droid
+Galerie
+Musique
+Navigateur
+SMS/MMS (à faire après l'installation de Alienage)
+
+Lancez le script "Installation.bat" sur windows ou "Installation.sh" sur linux. Suivez les instructions affichées au fur et à mesure.
+
+
+------------------------------------------------------
+
+    II/ Appareil non reconnu sur ordinateur
+	_______________________________________
+
+
+POUR R2GLER SUI QUI N'APPARAIT PAS : https://github.com/RikkaApps/Sui/issues/71#issuecomment-1793073211
+
+
+1) EN CAS DE GSM NON RECONNU SUR L'ORDI :
+
+SI LE GSM N'APPARAIT MËME PAS SUR LES DISQUES ET PERIPHERIQUES DE VOTRE ORDI ESSAYEZ UN AUTRE CABLE USB, BEAUCOUP DE CABLES USB PAS CHERS NE GERENT QUE LE RECHARGEMENT DE LA BATTERIE !!!
+
+A.
+Si le gsm n'est pas listé avec adb devices mais apparait sur votre ordi lancer :
+sudo adb kill-server
+sudo adb start-server
+puis
+adb services
+adb devices
+Le gsm devrait être reconnu, vous pouvez faire adb shell
+
+B.
+Pour "devices not found", l'appareil android qui n'apparait pas dans ADB
+si la tablette/gsm monte bien sur l'ordi lancer
+lsusb
+repérez la ligne avec la marque de votre tablette et copiez-la par exemple pour la mienne :
+Bus 001 Device 010: ID 1e68:0092 TrekStor GmbH & Co. KG
+pour mon honor 7 :
+Bus 001 Device 007: ID 12d1:1052 Huawei Technologies Co., Ltd.
+
+
+Le vendor id est 1e68 et le  product id est 0092.
+Créez un fichier /etc/udev/rules.d/50-android.rules, contenant le texte suivant :
+
+avec sudo thunar (ou nemo, nautilus etc) allez dans /etc/udev/rules.d/
+editez ou créez "51-android.rules" comme suit :
+# udev rule to detect android devices
+# These rules refer to http://developer.android.com/tools/device.html
+
+# adb protocol on maguro/toro (Trekstore)
+SUBSYSTEM=="usb", ATTR{idVendor}=="1e68", ATTR{idProduct}=="0092", MODE="0600", OWNER="barabbas"
+et enregistrez, voici ce que vous devez changer
+SUBSYSTEM=="usb", ATTR{idVendor}=="idvendor", ATTR{idProduct}=="idproduct", MODE="0600", OWNER="username"
+
+editez ou créez "50-android.rules" comme suit :
+SUBSYSTEM=="usb", ATTRS{idVendor}=="1e68", SYMLINK+="android_adb", MODE="0666", OWNER="barabbas"
+enregistrez
+Lancer
+sudo chmod a+r /etc/udev/rules.d/50-android.rules
+sudo /etc/init.d/udev restart
+
+
+Faire un fichier dans /.android/adb.ini avec :
+1
+0x1e68
+enregistrez
+
+lancez
+sudo gedit ~/.android/adb_usb.ini
+Mettre :
+# ANDROID 3RD PARTY USB VENDOR ID LIST -- DO NOT EDIT.
+# USE 'android update adb' TO GENERATE.
+# 1 USB VENDOR ID PER LINE.
+# ie 0x2207
+0x1e68
+enregistrez, vous devez remplacer 1e68 par votre vendorID.
+
+Ensuite
+adb kill-server
+adb start-server

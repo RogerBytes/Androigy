@@ -1,0 +1,22 @@
+{
+    "language": "system",
+    "incompatibleVersions": false,
+    "notifyUpdate": true,
+    "unstableUpdate": false,
+    "theme": "SYSTEM",
+    "dynamicTheme": true,
+    "installerType": "ROOT",
+    "autoUpdate": true,
+    "autoSync": "WIFI_ONLY",
+    "sortOrder": "UPDATED",
+    "proxy": {
+        "type": "DIRECT",
+        "host": "localhost",
+        "port": 9050
+    },
+    "cleanUpInterval": "PT12H",
+    "lastCleanup": "2024-01-10T23:34:06.047Z",
+    "favouriteApps": [
+    ],
+    "homeScreenSwiping": true
+}

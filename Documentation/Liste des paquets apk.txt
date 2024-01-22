@@ -1,0 +1,246 @@
+Appli de Lineage OS Désactivées
+_______________________________
+
+Appareil photo
+F-Droid
+Galerie
+Musique
+Navigateur
+SMS/MMS
+
+
+_______________________________________________________
+
+Appli de Lineage OS gardées
+
+Agenda (Etchar)
+Calculatrice
+ClipBoard
+Contacts (Ne pas désactiver/désinstaller)
+Fichier (Ne pas désactiver/désinstaller)
+Horloge (Ne pas désactiver/désinstaller)
+King Installer (Ne pas désactiver/désinstaller)
+Lucky Patcher (Ne pas désactiver/désinstaller)
+Magnétophone
+Radio FM
+Paramètres (Ne pas désactiver/désinstaller)
+Paramètres de MicroG (Ne pas désactiver/désinstaller)
+Play Store (Faux play Store - Ne pas désactiver/désinstaller)
+Settings (Magisk - Ne pas désactiver/désinstaller)
+Téléphone (Ne pas désactiver/désinstaller)
+
+
+_______________________________________________________
+
+Appli Open Source
+_________________
+
+Adaway (bloqueur de publicités)
+https://f-droid.org/fr/packages/org.adaway/
+
+Aegis Authenticator (Authentification à 2 facteurs 2FA)
+https://f-droid.org/fr/packages/com.beemdevelopment.aegis/
+
+AndroidIDE (un IDE pour android)
+https://f-droid.org/fr/packages/com.itsaky.androidide/
+
+Anysoft Keyboard (Clavier)
+https://f-droid.org/packages/com.menny.android.anysoftkeyboard/
+https://f-droid.org/packages/com.anysoftkeyboard.languagepack.french_xlarge/
+
+App Manager (Permet de gérer les paquets/appli)
+https://f-droid.org/fr/packages/io.github.muntashirakon.AppManager/
+
+Aurora Store
+https://f-droid.org/fr/packages/com.aurora.store/
+
+APK Combo Installer
+https://apkcombo.com/fr/apkcombo-installer/com.apkcombo.app/download/apk
+
+Barcode Scanner (Scanner des QRCode et codes barres)
+https://f-droid.org/packages/com.atharok.barcodescanner/
+
+Catima (permet de regroupper des cartes de fidélité)
+https://f-droid.org/fr/packages/me.hackerchick.catima/
+
+Collabora Office (Libre Office pour android)
+https://www.collaboraoffice.com/downloads/fdroid/repo
+
+Courrier K-9 Mail (Client Thunderbird pour android)
+https://github.com/thunderbird/thunderbird-android/releases
+
+CPU Info (Info sur le système)
+https://f-droid.org/fr/packages/com.kgurgul.cpuinfo/
+
+DAVx5 (CAL DAV)
+https://f-droid.org/packages/at.bitfire.davdroid/
+
+Dicio (Assistant vocal et Speech to Text)
+https://f-droid.org/packages/org.stypox.dicio/
+
+Download Navi (Gestionnaire de téléchargements)
+https://f-droid.org/fr/packages/com.tachibana.downloader/
+
+Droid-ify
+https://f-droid.org/fr/packages/com.looker.droidify/
+
+Element (Service sécurisé et Open Source d'appel/message)
+https://f-droid.org/packages/im.vector.app/
+
+EtchDroid (Permet d'installer des iso sur des usb, comme un OS pa exemple)
+https://f-droid.org/fr/packages/eu.depau.etchdroid/
+
+Galerie (Simple Gallery - Galerie des images et vidéos)
+https://github.com/SimpleMobileTools/Simple-Gallery/releases
+
+Hail (permet de geler des applications)
+https://f-droid.org/fr/packages/com.aistra.hail/
+
+Key Mapper Leanback Keyboard (Clavier virtuel pour télécommande ou manette)
+https://github.com/keymapperorg/KeyMapperLeanbackKeyboard/releases
+
+KeePassDX (gestionnaire de mots de passe sécurisé)
+https://f-droid.org/fr/packages/com.kunzisoft.keepass.libre/
+
+Kiwi Browser (navigateur supportant les extensions chrome)
+https://github.com/kiwibrowser/src.next/releases
+
+Kodi (Médiathèques ultra complète et frontend)
+https://f-droid.org/fr/packages/org.xbmc.kodi/
+
+KOReader (Liseuse d'ebook et pdf)
+https://f-droid.org/fr/packages/org.koreader.launcher.fdroid/
+
+Lawnchair (Launcher)
+https://github.com/lawnchairlauncher/lawnchair/releases
+
+Libre Torrent (client torrent)
+https://f-droid.org/fr/packages/org.proninyaroslav.libretorrent/
+
+Lichess (jeu d'échecs)
+https://f-droid.org/fr/packages/org.lichess.mobileapp.free/
+
+Material Files (Explorateur de fichier alternative à MiXplorer)
+https://f-droid.org/fr/packages/me.zhanghai.android.files/
+
+Météo (Geometric Weather)
+https://f-droid.org/packages/wangdaye.com.geometricweather/
+
+Metro (Lecteur audio et musical)
+https://f-droid.org/fr/packages/io.github.muntashirakon.Music/
+
+MJ PDF (Lecteur PDF)
+https://apt.izzysoft.de/fdroid/index/apk/com.gitlab.mudlej.MjPdfReader
+
+MMRL (Gestion des modules magisk)
+https://github.com/DerGoogler/MMRL/releases
+
+Moonlight Game Streaming (du jeu en streaming grâce à votre pc)
+https://f-droid.org/fr/packages/com.limelight/
+
+Motion Source (outil spécialisé pour les capteurs pour CEMU)
+https://cemuhook.sshnuke.net/padudpserver.html (cliquer sur "(for Pixel7+ use 64-bit version APK)")
+
+MRepo (Gestion des modules magisk)
+https://github.com/MRepoApp/MRepo/releases
+
+Next Player (Lecteur vidéo)
+https://f-droid.org/packages/dev.anilbeesetti.nextplayer/
+
+Newpipe (Client Youtube)
+https://f-droid.org/packages/org.schabi.newpipe/
+
+Oikoin Money Manager (Compatabibilité sur android)
+https://f-droid.org/fr/packages/com.github.emavgl.piggybankpro/
+
+Open Camera (Caméra)
+https://f-droid.org/packages/net.sourceforge.opencamera/
+
+Osmand~ (GPS)
+https://f-droid.org/packages/net.osmand.plus/
+
+OSS Document Scanner (Scanner des documents ou images)
+https:/apt.izzysoft.de/fdroid/index/apk/com.akylas.documentscanner
+
+OMW Nightly (Moteur de jeu de Morrowind)
+https://f-droid.org/fr/packages/is.xyz.omw_nightly/
+
+Pegasus Frontend (Frontend pour jouer, équivalent de emulation station)
+https://pegasus-frontend.org/#downloads
+
+QKSMS (SMS)
+https://f-droid.org/packages/com.moez.QKSMS/
+
+QuickSwitch (Gestion des launcher)
+https://github.com/skittles9823/QuickSwitch/releases
+
+RetroArch (Frontend pour gérer ses émulateurs)
+https://retroarch.com/?page=platforms (android 64x)
+
+RustDesk (accès à distance à un appareil)
+https://f-droid.org/fr/packages/com.carriez.flutter_hbb/
+
+Sat Stat (outil module GPS)
+https://f-droid.org/packages/com.vonglasow.michael.satstat/
+
+Save to (permet d'enregistrer un fichier via la fonction partage)
+https://f-droid.org/packages/xyz.myachin.saveto/
+
+Shizuku (gestionnaire intermédiaire rapide de root)
+https://apt.izzysoft.de/fdroid/index/apk/moe.shizuku.privileged.api
+
+TachiyomiJ2K (Lecteur de mangas et BD)
+https://github.com/jays2kings/tachiyomiJ2K/releases
+
+Termux (un terminal pour android)
+https://f-droid.org/fr/packages/com.termux/
+https://f-droid.org/fr/packages/com.termux.api/
+https://f-droid.org/fr/packages/com.termux.styling/
+https://f-droid.org/fr/packages/com.termux.nix/
+https://f-droid.org/fr/packages/com.termux.widget/
+https://f-droid.org/fr/packages/com.termux.window/
+
+Url Radio (Web Radio)
+https://apt.izzysoft.de/fdroid/index/apk/com.jamal2367.urlradio
+
+ZipXtract (utilitaire d'archive)
+https://f-droid.org/fr/packages/com.wirelessalien.zipxtract/
+
+
+_______________________________________________________
+
+Apk Playstore
+_____________
+
+8BitDo Ultimate Software (Utilitaire manette)
+https://apkcombo.com/fr/8bitdo-ultimate-software/com.abitdo.advance/
+
+Adobe AIR (Comme son nom l'indique il implémente adobe air)
+https://apkcombo.com/fr/adobe-air/com.adobe.air/
+
+DeepL Traducteur (meilleur que Google Translate)
+https://apkcombo.com/fr/deepl-translate/com.deepl.mobiletranslator/
+
+Spacedesk (Permet d'avoir un écran secondaire de windows sur son GSM)
+https://apkcombo.com/fr/spacedesk/ph.spacedesk.beta/
+
+Vivaldi (Navigateur)
+https://apkcombo.com/fr/vivaldi-browser/com.vivaldi.browser/
+
+Zero Tier One (Lan par internet)
+https://apkcombo.com/fr/zerotier-one/com.zerotier.one/
+
+_______________________________________________________
+
+Apk Demo
+________
+
+(ne pas mettre à jour dans aurora store via blacklist)
+
+FolderSync (synchronisation de services de cloud)
+Mantis Gamepad (Permet de bind le tactile sur une manette)
+Pizza Boy GBA (émulateur GBA)
+Pizza Boy (émulateur GB et GBC)
+Shazam (Permet de reconnaître de la musique)
+
+_______________________________________________________

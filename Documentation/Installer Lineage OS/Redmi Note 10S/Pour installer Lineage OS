@@ -1,0 +1,501 @@
+Prérequis :
+
+Il faut flasher la rom stock fastboot "rosemary_global_images_V12.5.16.0.RKLMIXM_20220329.0000.00_11.0_global" (et pas autre chose)
+
+Télécharger ici : https://github.com/B4rabbas/Redmi-Note-10S-Documentation/releases/tag/v1.0.0-Stock-Fastboot-Roms
+
+Déverouiller les options dev et le debug usb
+
+
+
+------------------------------------------------------
+
+
+
+I - Installer le custom recovery (le "boot.img") de lineage ici :
+
+Téléchargez "boot.img" ici https://github.com/B4rabbas/Redmi-Note-10S-Documentation/releases/tag/v1.0.0-Custom-Recovery
+
+
+
+mettez "boot.img" à la racine de votre dossier user (ou dans votre dossier adb sur windows)
+
+Et brancher votre gsm à l'ordinateur
+
+
+
+Redémmarer en mode bootloader
+
+adb -d reboot bootloader
+
+tester que l'appareil est bien reconnu :
+
+fastboot devices
+
+
+
+Flasher le custom recovery
+
+fastboot flash boot boot.img
+
+
+
+Redémmarrer sur le mode recovery avec la commande :
+
+fastboot reboot recovery
+
+
+
+et restez en mode recovery pour faire la suite
+
+
+
+------------------------------------------------------
+
+
+
+II - Installer la custom rom depuis le custom recovery
+
+
+
+Télécharger "lineage-20.0-20240110-nightly-rosemary-signed.zip" ici https://github.com/B4rabbas/Redmi-Note-10S-Documentation/releases/tag/v1.0.0-Custom-Roms
+
+
+
+Sur le mode recovery de lineage cliquer sur le tactile sur "Factory Reset" puis "Format data / factory reset" et enfin "Format data"
+
+
+
+Dans le custom recovery de lineage, à la racine du menu, cliquer sur "Apply update" et sur “Apply from ADB” vous verrez l'info "ADB Sideload" (au dessus du bouton d'annulation "Cancel").
+
+
+
+mettez "lineage-20.0-20240110-nightly-rosemary-signed.zip" à la racine de votre dossier user (ou dans votre dossier adb sur windows)
+
+Et brancher votre gsm à l'ordinateur
+
+
+
+ensuite utiliser la commande par défaut pour flasher un fichier :
+
+adb -d sideload filename.zip
+
+
+
+donc dans le cas présent je tape la commande
+
+adb -d sideload lineage-20.0-20240110-nightly-rosemary-signed.zip
+
+# Il lui faudra 60 seconde pour aller jusqu'à ~47%, c'est seulement après qu'il commencera l'installation (il faut bien 3-4 minutes)
+
+
+
+Quand l'installation est finie un prompt dira
+
+"To install additional packages, you need to reboot recovery first
+
+Do you want to reboot to recovery mode now?
+
+
+
+Cliquez sur "NO" redémmarez sur le system et faites la fin d'installation de lineage.
+
+
+
+
+
+------------------------------------------------------
+
+
+
+III) Flasher magisk depuis le custom recovery
+
+Télécharger "Magisk-v26.4.zip" ici https://github.com/B4rabbas/Redmi-Note-10S-Documentation/releases/tag/v1.0.0-Magisk-flashable-zip
+
+
+
+Activer les options dev :
+
+"Paramètres/A propos du téléphone/
+
+Et cliquez 7 fois sur le numéro de build.
+
+
+
+Régler les options dev :
+
+"Paramètres/Système/Options pour les développeurs
+
+Ensuite (dans l'ordre depuis le haut) :
+
+- Débogage USB (activer)
+
+- Débogage rooté (activer)
+
+- Désactiver délai d'expiration autorisation adb (activer)
+
+- Configuration USB par défaut (Transfert de fichiers)
+
+- Forcer l'autorisation d'applis sur stockage externe (activer)
+
+
+
+Sur l'écran doit popper la validation d'empreinte de votre ordi, s'il n'a pas pop, désactiver et réactiver l'option "Déboguage USB"
+
+
+
+Le réglage des options dev est fini.
+
+
+
+
+
+Redémmarer en mode recover avec :
+
+adb reboot recovery
+
+faire apply update et Apply from ADB puis
+
+adb -d sideload Magisk-v26.4.zip
+
+(corrigez la commande si c'est une version plus récente de magisk)
+
+Confirmez "YES" malgrès "Signature verification failed"
+
+
+
+Quand l'installation est finie, choisir "Reboot system now"
+
+
+
+
+
+------------------------------------------------------
+
+
+
+IV) Régler magisk
+
+
+
+Une fois démarré et avoir fini d'installer, lancer magisk, il proposera "Installayion supplémentaire requise" fait "OK" ce qui va redémarrer le gsm, ensuite après reboot relancez magisk il redit "Installayion supplémentaire requise" choisissez "installation directe (recommandé)" et de reboot, accepetez tout
+
+Après le reboot relancez magisk et allez dans ses options (roue dentée en haut à droite) Activez
+
+
+
+DNS sur HTTPS
+
+Masquer l'application Magisk
+
+Fichier d'hôtes hors partition système
+
+Zygisk
+
+Authentification utilisateur
+
+
+
+Puis redémarrer, magisk est installé et bien régla !
+
+
+
+
+
+------------------------------------------------------
+
+
+
+
+
+V Flasher des modules avec magisk et signature fix
+
+
+
+Télécharger tous les modules ici https://github.com/B4rabbas/Redmi-Note-10S-Documentation/releases/tag/v1.0.0-Modules-Magisk
+
+Attention au modules magisk "safetynet-fix-v2.3.1-MOD_3.0.zip" il ne faut pas le mettre à jour sinon MicroG ne marchera pas correctement
+
+Prenez l'archive "Magisk-modules.zip"
+
+
+
+
+
+Décompressez l'archive et copier le dossier "Magisk-modules" dans le dossier "Download" dans votre smartphone.
+
+Ensuite il vous reste à faire dans un terminal :
+
+adb shell "su -c 'magisk --install-module /storage/emulated/0/Download/Magisk-modules/ADB_Fastboot_for_Android_NDK_1.0.41__104114_.zip'"
+
+adb shell "su -c 'magisk --install-module /storage/emulated/0/Download/Magisk-modules/AuroraServices-v1.1.1-magisk.zip'"
+
+adb shell "su -c 'magisk --install-module /storage/emulated/0/Download/Magisk-modules/Busybox_for_Android_NDK_1.36.1__13614_.zip'"
+
+adb shell "su -c 'magisk --install-module /storage/emulated/0/Download/Magisk-modules/MiXplorer.v6.64.3_B23090710.zip'"
+
+adb shell "su -c 'magisk --install-module /storage/emulated/0/Download/Magisk-modules/safetynet-fix-v2.3.1-MOD_3.0.zip.zip'"
+
+adb shell "su -c 'magisk --install-module /storage/emulated/0/Download/Magisk-modules/Zygisk_-_Clipboard_Whitelist_v26__26_.zip'"
+
+adb shell "su -c 'magisk --install-module /storage/emulated/0/Download/Magisk-modules/Zygisk_-_IFW_Enhance_v22__22_.zip'"
+
+adb shell "su -c 'magisk --install-module /storage/emulated/0/Download/Magisk-modules/Zygisk_-_LSPosed_v1.9.2__7024_.zip'"
+
+adb shell "su -c 'magisk --install-module /storage/emulated/0/Download/Magisk-modules/Zygisk_-_Sui_v13.5.1__319_.zip'"
+
+
+
+Et redémmarez avec
+
+adb reboot
+
+
+
+
+
+Si vous voulez avoir le raccourci de SUI :
+
+Allez dans les options dev pour créer le raccourci de sui
+
+
+
+------------------------------------------------------
+
+
+
+
+
+VI Applications complémentaires
+
+
+
+Télécharger tous les modules ici https://github.com/B4rabbas/Redmi-Note-10S-Documentation/releases/tag/v1.0.0-APK
+
+
+
+Prenez l'archive "Lineage-apks.zip"
+
+
+
+Décompréssez l'archive et ouvrez un terminal dans le répertoire dans lequelle vous avez décompréssé l'archive
+
+Dans le terminal (en une seule fois) pour installer les applications (pour linux):
+
+for file in ./Lineage-apks/*
+
+do
+
+  adb install $file
+
+done
+
+
+
+sur windows :
+
+for %%f in (.\Lineage-apks\*) do (
+
+  adb install "%%f"
+
+)
+
+
+
+Allez sur votre smartphone juste après fait l'installetion, il y a une demande d'accès à accepter.
+
+
+
+
+
+------------------------------------------------------
+
+
+
+
+
+VI Réglages de Lucky Patchers et FakeGapps
+
+
+
+Dans les notification ouvre Lposed (l'icone rose de sparadrap)
+
+Activez chaque module.
+
+
+
+Ouvrez LP Installer. Faites l'installation et donner l'autorisation magisk qui pop.
+
+Quand le choix qui propose d'ouvrir l'appli (qui a un nom aléatoire) faites "ouvrir"
+
+Donner les autorisations et juste après choisissez "Commencer à desinstaller de le programme d'installation"
+
+
+
+Si demandé faites les màj proposées.
+
+Depuis les notifications allez dans LSposed et activez le module.
+
+
+
+------------------------------------------------------
+
+
+
+VII Installer MicroG
+
+
+
+Basé sur : https://xdaforums.com/t/guide-19-1-microg-safetynet.4577357/
+
+[URL unfurl="true"]https://github.com/FriendlyNeighborhoodShane/MinMicroG-abuse-CI/releases[/URL]
+
+Téléchargez ici https://github.com/B4rabbas/Redmi-Note-10S-Documentation/releases/tag/v1.0.0-microG
+
+
+
+Ouvrez un terminal dans le dossier où se trouve "MinMicroG****.zip"
+
+Redémmarer en mode recover avec :
+
+adb reboot recovery
+
+faire apply update et Apply from ADB puis
+
+adb -d sideload MinMicroG-Standard-UPDATELY-20231029004612.zip
+
+Confirmez "YES" malgrès "Signature verification failed"
+
+
+
+Quand l'installation est finie, choisir "Reboot system now"
+
+
+
+Dans le même terminal faites
+
+adb install com.android.vending-83752400.apk (pas grave s'il s'installe pas)
+
+adb install app-release.apk
+
+
+
+Restez appuyé sur "Paramètres de MicroG" et donnez toutes les autorisations.
+
+
+
+Dans votre smartphone ouvrez l'application "Paramètres de MicroG"
+
+Activer tout dans Location
+
+Dans Account, mettez votre comptes
+
+Activez Register device dans Enregistrement du terminal auprès de google
+
+Activez "Receive push notifications" Dans "Cloud messaging"
+
+Activer "Allow device attestation" dans "Google SafetyNet"
+
+
+
+Penser à rejouter le repo de microG dans Droid-ify
+
+Dans les paramète activer
+
+Material You
+
+Mise à jour automatique des applis
+
+Installateur (installateur racine) donner autorisation magisk qui pop
+
+
+
+et deans les paramètre de magisk aller dans "Configurer Liste d'Exclusion" (il y a pas)
+
+______________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------
+
+
+
+VIII/ Derniers réglages et infos
+
+
+
+Lancer Les service aurora (dans les app) et donnez les permissions.
+
+
+
+Désactivez "Aurora Droid"
+
+Lancez Aurora Store
+
+Choisissez Aurora Service comme installateur
+
+Et donnez les autorisation de lien d'appli (cliquer sur activer puis "ajouter un lien" pour amazon laissez tomber pour les autres)
+
+Donnez les autorisations
+
+
+
+Paramètres/Réseau et internet/Profil Sim/
+
+
+
+Et désactiver "Appel en 4G"
+
+
+
+Le ftp de MiXplorer
+
+Ne pas oublier d'editer le comptes pour ajouter un mdp
+
+et ensuite pour se co :
+
+
+
+FTP
+
+ftp://192.168.1.11:2121/
+
+
+
+
+
+Restaurer l'application magisk dans ses options
+
+
+
+Relancez Lucky Patcher
+
+Dans les options "boite à outils" lancer Patchs pour android cochez "Désactiver la vérification de la signature dans le gestionnaire de package" cliquer ensuite sur appliquer il demande de reboot dire oui
+
+Dans les options "boite à outils" lancer Paramètres Xposed et cochez tout puis "Appliquer" il demande de reboot dire oui
+
+Dans les options "boite à outils" lancez "installer une version modifiée du google play store" et tester celle par défaut et aussi la denirère original (il y a une mage de Google play cliquer sur "Continuer sur Google Play" après l'erreur)
+
+
+
+Masquer l'application magisk dans ses options
+
+
+
+Bloquer Google Protect dans les options du play store

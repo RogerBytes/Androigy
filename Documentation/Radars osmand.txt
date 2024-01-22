@@ -1,0 +1,4 @@
+Pour les POI et faire apparaitres les radars dans Osmand+ https://1e1.github.io/Open-GATSO-POI/
+https://github.com/1e1/Open-GATSO-POI/releases/tag/travis_master.2021-08-06
+les radars de vitesse c'est GATSO_speed_0.gpx (mais vous pouvez en ajouter d'autres), ça mettra tous les types de radars (radars mobiles, radars de feux etc)
+Pour les importer dans Osmand+ allez dans Lieux Favoris/+

@@ -1,0 +1,11 @@
+Redémmarrer en mode normal
+adb reboot
+
+Redémmarrer en mode fastboot
+adb reboot fastboot
+
+Redémmarrer en mode fastboot stock
+adb reboot bootloader
+
+Redémmarrer en mode recovery
+adb reboot recovery
