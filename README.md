@@ -92,19 +92,11 @@ Dans le terminal, dans le dossier extrait depuis l'archive (l'on y est déjà ap
 
 ### Installations manuelles
 
-#### Grub Csutomizer
+En cours
 
 #### Derniers réglages
 
-Sinon sur votre bureau 'clic droit' > personnaliser :
-décochez "ajustement automatique", puis cliquez en bas sur "Paramètre du bureau"
-Décochez le poste de travail et cochez le dossier personnel
-
-Lancez Xpad une première fois depuis le menu.
-
-Clic droit sur l’icône "préférences" dans l'onglet "au démarrage, cochez "Démarrer Xpad automatiquement après l'ouverture de session".
-
-Votre installation est terminée !
+En cours
 
 </details>
 
