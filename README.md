@@ -1,7 +1,7 @@
 # Androigy
 
 <figure>
-  <img src="./DATA/preview.gif" alt="Preview" style="height:50%;">
+  <img src="./DATA/preview.gif" alt="Preview" style="height:50vh;">
   <figcaption></figcaption>
 </figure>
 
