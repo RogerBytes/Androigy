@@ -83,22 +83,7 @@ cd $folder_name
 Dans le terminal, dans le dossier extrait depuis l'archive (l'on y est déjà après avoir fait les prérequis)
 
 ```bash
-./prerequis.sh
-```
-
-Puis dans un nouveau terminal :
-
-```bash
 ./install.sh
-```
-
-puis faire un reboot
-Lancez vivaldi et thunderbird une première fois
-
-après reboot, lancer :
-
-```bash
-./after-reboot.sh
 ```
 
 ### Installations manuelles

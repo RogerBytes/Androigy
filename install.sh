@@ -95,21 +95,21 @@ $author"
 # Fonctions
 
 function pause {
- read -s -n 1 -p "Appuyez sur une touche pour continuer ou 'CTRL+C' pour quitter le script..."
- echo ""
+  read -s -n 1 -p "Appuyez sur une touche pour continuer ou 'CTRL+C' pour quitter le script..."
+  echo ""
 }
 
 function greeting {
- echo -e "$1\n\n**ATTENTION**\n$2\n\n$3\nRecommandé pour $4\n\nPrérequis : \n$5\n\nDescription du produit :\n$6\n\n$7\nCréé par $8\n"
- pause
+  echo -e "$1\n\n**ATTENTION**\n$2\n\n$3\nRecommandé pour $4\n\nPrérequis : \n$5\n\nDescription du produit :\n$6\n\n$7\nCréé par $8\n"
+  pause
 }
 
 function goodbye {
- echo -e "$1"
- pause
- echo -e "$2"
- read -s -n 1 -p "Appuyez sur une touche pour fermer l'utilitaire d'installation."
- echo ""
+  echo -e "$1"
+  pause
+  echo -e "$2"
+  read -s -n 1 -p "Appuyez sur une touche pour fermer l'utilitaire d'installation."
+  echo ""
 }
 
 
