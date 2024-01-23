@@ -1,9 +1,13 @@
 # Androigy
 
+<details style="background-color: #222222; border: 1px solid #ccc; border-radius: 4px;">
+<summary>Afficher/Masquer</summary>
+
 <figure>
   <img src="./DATA/preview.gif" alt="Preview" style="height:300px;">
   <figcaption></figcaption>
 </figure>
+</details>
 
 Ce script est conçu pour automatiser le processus de personnalisation de Android en installant une suite complète de logiciels open source. De manière simple, les utilisateurs peuvent transformer leur système Android en un environnement de travail puissant et personnalisé, idéal pour les développeurs, les créateurs de contenu et (bien évidemment) les utilisateurs quotidiens.
 
