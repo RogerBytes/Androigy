@@ -38,6 +38,9 @@ _________________
 Adaway (bloqueur de publicités)
 https://f-droid.org/fr/packages/org.adaway/
 
+ADBio (toogle pour activer/désactiver simple le debug usb)
+https://f-droid.org/fr/packages/io.github.yoshi1123.adbio/
+
 Aegis Authenticator (Authentification à 2 facteurs 2FA)
 https://f-droid.org/fr/packages/com.beemdevelopment.aegis/
 
@@ -95,6 +98,12 @@ https://github.com/SimpleMobileTools/Simple-Gallery/releases
 
 Hail (permet de geler des applications)
 https://f-droid.org/fr/packages/com.aistra.hail/
+
+Hypatia (antivirus CLAM)
+https://f-droid.org/fr/packages/us.spotco.malwarescanner/
+
+KDE Connect (interaction avec votre système Linux)
+https://f-droid.org/fr/packages/org.kde.kdeconnect_tp/
 
 Key Mapper Leanback Keyboard (Clavier virtuel pour télécommande ou manette)
 https://github.com/keymapperorg/KeyMapperLeanbackKeyboard/releases
@@ -202,6 +211,12 @@ https://f-droid.org/fr/packages/com.termux.window/
 
 Url Radio (Web Radio)
 https://apt.izzysoft.de/fdroid/index/apk/com.jamal2367.urlradio
+
+WADBS (toogle pour activer/désactiver simplement le debug usb wifi)
+https://f-droid.org/fr/packages/com.smoothie.wirelessDebuggingSwitch/
+
+Warpinator (outil de partage de Linux Mint)
+https://f-droid.org/fr/packages/slowscript.warpinator/
 
 ZipXtract (utilitaire d'archive)
 https://f-droid.org/fr/packages/com.wirelessalien.zipxtract/
