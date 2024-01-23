@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# Téléchargement/décompression des paquets trop volmineux pour être dans le repo
+wget https://github.com/RogerBytes/Androigy/releases/download/v0.0.1-data/fatDATAAPK.tar.gz
+fatDATAAPK.tar.gz
+tar -xvf fatDATAAPK.tar.gz -C ./DATA/app/apk
+mv ./DATA/app/apk/fatDATAAPK/* ./DATA/app/apk/
+rm -r ./DATA/app/apk/fatDATAAPK/
+wget https://github.com/RogerBytes/Androigy/releases/download/v0.0.1-data/fatDATAAPK-PLAYSTORE.tar.gz
+tar -xvf fatDATAAPK-PLAYSTORE.tar.gz -C ./DATA/app/apk-playstore
+mv ./DATA/app/apk-playstore/fatDATAAPK-PLAYSTORE/* ./DATA/app/apk-playstore/
+rm -r ./DATA/app/apk-playstore/fatDATAAPK-PLAYSTORE/
+
 # Déclaration de Variables
 title="Alienage Suite"
 target="Android 10+ ARMv8 (x64)"
@@ -111,9 +122,9 @@ greeting "$title - Installation" "$warning" "$target" "$recommanded" "$prerequis
 
 ## Création de dossiers
 adb shell mkdir /storage/emulated/0/Download/Documents
-adb shell mkdir /storage/emulated/0/Download/Games
-adb shell mkdir /storage/emulated/0/Download/Games/EmulatorData
-adb shell mkdir /storage/emulated/0/Download/Games/Rom
+adb shell mkdir /storage/emulated/0/Download/Jeux
+adb shell mkdir /storage/emulated/0/Download/Jeux/EmulatorData
+adb shell mkdir /storage/emulated/0/Download/Jeux/Rom
 adb shell mkdir /storage/emulated/0/Download/Images
 adb shell mkdir /storage/emulated/0/Download/Local
 adb shell mkdir /storage/emulated/0/Download/Modèles
