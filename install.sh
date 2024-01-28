@@ -72,7 +72,6 @@ Retournez au menu (en haut à gauche les trois traits) puis \"Gestionnaire de la
 
 - FolderSync
 - MicroG Services Core
-- Octopus
 - Pizza Boy GBA
 - Pizza Boy
 - Scanner de documents OSS

@@ -5,36 +5,20 @@
         <value version="1"/>
         <pref>
             <pref>
-                <value theme_1f593f8f-0457-4ba1-9d26-11cc69ac24f4="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value settings_key_night_mode="always"/>
+                <value settings_key_swipe_right_action="next_alphabet"/>
                 <value type="string"/>
-            </pref>
-            <pref>
-                <value theme_28860f10-cf16-11e1-9b23-0800200c9a66="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value theme_c38a9214-4338-4cb0-b68e-11d1683d4424="false"/>
-                <value type="bool"/>
             </pref>
             <pref>
                 <value ext_kbd_enabled_1_3659b9e0-dee2-11e0-9572-0800200c9a66="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
-                <value settings_key_hide_soft_when_physical="true"/>
+                <value settings_key_power_save_mode_theme_control="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
                 <value settings_key_use_user_dictionary="true"/>
                 <value type="bool"/>
-            </pref>
-            <pref>
-                <value settings_key_layout_for_internet_fields="c7535083-4fe6-49dc-81aa-c5438a1a343a"/>
-                <value type="string"/>
             </pref>
             <pref>
                 <value settings_key_allow_layouts_to_provide_generic_rows="true"/>
@@ -45,31 +29,27 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value ext_kbd_enabled_2_16bbcd88-5532-4fd6-92ff-db57977dd815="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
                 <value settings_key_force_locale="System"/>
                 <value type="string"/>
+            </pref>
+            <pref>
+                <value ext_kbd_enabled_2_16bbcd88-5532-4fd6-92ff-db57977dd815="false"/>
+                <value type="bool"/>
             </pref>
             <pref>
                 <value settings_key_use_custom_hint_align="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
+                <value type="bool"/>
+                <value settings_key_power_save_mode_gesture_control="true"/>
+            </pref>
+            <pref>
                 <value ext_kbd_enabled_2_82910c70-ded1-11e0-9572-0800200c9a66="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
-                <value settings_key_next_word_dictionary_type="off"/>
-                <value type="string"/>
-            </pref>
-            <pref>
                 <value ext_kbd_enabled_1_f50fee17-ad7a-4068-aff4-07e34ac68c52="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value settings_key_enable_alt_space_language_shortcut="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -77,16 +57,8 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value theme_def50bd0-2b3c-4112-bca8-318740a1878b="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
                 <value settings_key_keyboard_icon_in_status_bar="false"/>
                 <value type="bool"/>
-            </pref>
-            <pref>
-                <value type="bool"/>
-                <value settings_key_use_backword="true"/>
             </pref>
             <pref>
                 <value type="string"/>
@@ -97,23 +69,11 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value theme_55d9797c-850c-40a8-9a5d-7467b55bd537="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value settings_key_show_keyboard_name_text_key="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value theme_b548be5a-1358-4b61-9bd9-1cd4a0511ccb="false"/>
+                <value settings_key_show_keyboard_name_text_key="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
                 <value key_press_preview_popup="true"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value settings_key_night_mode_theme_control="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -125,23 +85,19 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value type="bool"/>
-                <value settings_key_allow_suggestions_restart="true"/>
-            </pref>
-            <pref>
                 <value ext_kbd_enabled_1_f5326050-2471-42e0-a470-c5d52d08dc9d="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
+                <value settings_key_power_save_mode="on_low_battery"/>
+                <value type="string"/>
+            </pref>
+            <pref>
+                <value settings_key_swipe_up_from_spacebar_action="utility_keyboard"/>
+                <value type="string"/>
+            </pref>
+            <pref>
                 <value settings_key_apply_remote_app_colors="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value double_space_to_period="true"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value settings_key_night_mode_vibration_control="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -150,11 +106,7 @@
             </pref>
             <pref>
                 <value type="bool"/>
-                <value theme_8774f99e-fb4a-49fa-b8d0-4083f762250a="true"/>
-            </pref>
-            <pref>
-                <value type="bool"/>
-                <value quick_fix="true"/>
+                <value quick_fix="false"/>
             </pref>
             <pref>
                 <value configurationVersion="12"/>
@@ -165,11 +117,7 @@
                 <value type="string"/>
             </pref>
             <pref>
-                <value settings_key_cycle_all_symbols="true"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value theme_18c558ef-bc8c-433a-a36e-92c3ca3be4dd="false"/>
+                <value settings_key_power_save_mode_vibration_control="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -177,44 +125,32 @@
                 <value type="bool"/>
             </pref>
             <pref>
+                <value settings_key_workaround_disable_rtl_fix="true"/>
+                <value type="bool"/>
+            </pref>
+            <pref>
+                <value settings_key_swipe_left_two_fingers_action="next_symbols"/>
+                <value type="string"/>
+            </pref>
+            <pref>
                 <value settings_key_custom_hint_valign_key="48"/>
                 <value type="string"/>
             </pref>
             <pref>
-                <value settings_key_persistent_layout_per_package_id="true"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value settings_key_always_use_fallback_user_dictionary="true"/>
-                <value type="bool"/>
+                <value settings_key_swipe_up_action="shift"/>
+                <value type="string"/>
             </pref>
             <pref>
                 <value zoom_factor_keys_in_portrait="1.0"/>
                 <value type="string"/>
             </pref>
             <pref>
-                <value settings_key_use_volume_key_for_left_right="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
                 <value ext_kbd_enabled_2_f926cc04-c8ba-4392-8000-e52b8abb7093="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
-                <value settings_key_switch_keyboard_on_space="true"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value theme_8a56f044-22d3-480a-9221-f3b7a9c85905="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value settings_key_next_word_suggestion_aggressiveness="medium_aggressiveness"/>
+                <value settings_key_swipe_left_action="next_symbols"/>
                 <value type="string"/>
-            </pref>
-            <pref>
-                <value type="bool"/>
-                <value theme_2fbea491-15f6-4b40-9259-06e21d9dba95="false"/>
             </pref>
             <pref>
                 <value settings_key_use_system_vibration="true"/>
@@ -233,12 +169,16 @@
                 <value type="bool"/>
             </pref>
             <pref>
+                <value settings_key_gesture_typing="false"/>
+                <value type="bool"/>
+            </pref>
+            <pref>
                 <value keyboard_c7535083-4fe6-49dc-81aa-c5438a1a343a="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
-                <value type="bool"/>
-                <value settings_key_night_mode_app_theme_control="true"/>
+                <value settings_key_swipe_down_action="hide"/>
+                <value type="string"/>
             </pref>
             <pref>
                 <value type="bool"/>
@@ -247,6 +187,14 @@
             <pref>
                 <value settings_key_use_contacts_dictionary="true"/>
                 <value type="bool"/>
+            </pref>
+            <pref>
+                <value settings_key_landscape_fullscreen="true"/>
+                <value type="bool"/>
+            </pref>
+            <pref>
+                <value settings_key_long_press_timeout="350"/>
+                <value type="string"/>
             </pref>
             <pref>
                 <value type="bool"/>
@@ -269,11 +217,11 @@
                 <value type="string"/>
             </pref>
             <pref>
-                <value theme_b8d8d941-4e56-46a7-aa73-0ae593ca4aa3="false"/>
+                <value settings_key_show_chewbacca="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
-                <value settings_key_show_chewbacca="false"/>
+                <value settings_key_power_save_mode_sound_control="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -282,22 +230,26 @@
             </pref>
             <pref>
                 <value type="bool"/>
+                <value settings_key_power_save_mode_animation_control="true"/>
+            </pref>
+            <pref>
+                <value type="bool"/>
                 <value ext_kbd_enabled_2_49c8c4b0-b3bc-11e8-933e-975e4dcf2c13="false"/>
             </pref>
             <pref>
+                <value type="string"/>
+                <value settings_key_separate_gesture_action="split_layout"/>
+            </pref>
+            <pref>
+                <value settings_key_extension_keyboard_enabled="true"/>
                 <value type="bool"/>
-                <value theme_309a9770-f732-11e3-a3ac-0800200c9a66="false"/>
+            </pref>
+            <pref>
+                <value default_domain_text=".com"/>
+                <value type="string"/>
             </pref>
             <pref>
                 <value ext_kbd_enabled_2_1fae0220-ded6-11e0-9572-0800200c9a66="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value theme_3ef2055d-d99e-4862-85ac-2b97932aa3f9="false"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value settings_key_bool_should_swap_punctuation_and_space="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -305,12 +257,12 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value type="bool"/>
-                <value settings_key_show_hint_text_key="true"/>
+                <value type="string"/>
+                <value settings_key_swipe_right_space_bar_action="next_alphabet"/>
             </pref>
             <pref>
-                <value theme_ac8ea510-ca66-11e1-9b23-0800200c9a66="false"/>
                 <value type="bool"/>
+                <value settings_key_show_hint_text_key="true"/>
             </pref>
             <pref>
                 <value ext_kbd_enabled_1_66e1c3a5-42d7-48be-8f97-d2a3a9e38be9="false"/>
@@ -325,7 +277,7 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value settings_key_night_mode_sound_control="false"/>
+                <value settings_key_show_settings_app="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -333,16 +285,8 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value settings_key_show_settings_app="true"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value use_keyrepeat="true"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value theme_2a94cf8c-266c-47fd-8c8c-c9c57d28d7dc="false"/>
-                <value type="bool"/>
+                <value settings_key_pinch_gesture_action="merge_layout"/>
+                <value type="string"/>
             </pref>
             <pref>
                 <value type="string"/>
@@ -353,15 +297,19 @@
                 <value settings_key_hint_size="normal"/>
             </pref>
             <pref>
+                <value type="string"/>
+                <value settings_key_default_split_state_portrait="merged_always"/>
+            </pref>
+            <pref>
+                <value settings_key_is_sticky_extesion_keyboard="false"/>
+                <value type="bool"/>
+            </pref>
+            <pref>
                 <value setup_wizard_STARTED_SETUP_PREF_KEY="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
                 <value candidates_on="true"/>
-                <value type="bool"/>
-            </pref>
-            <pref>
-                <value insert_space_after_word_suggestion_selection="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -373,23 +321,39 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value theme_EC93C810-4FC5-4FC3-8CE4-1CDA44680A0D="false"/>
+                <value settings_key_os_clipboard_sync="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
-                <value theme_bdecfba3-a937-4ee6-be50-e7793ff239fb="false"/>
-                <value type="bool"/>
+                <value settings_key_swipe_left_space_bar_action="next_symbols"/>
+                <value type="string"/>
             </pref>
             <pref>
                 <value type="bool"/>
-                <value ext_kbd_enabled_1_09f8f280-dee2-11e0-9572-0800200c9a55="false"/>
+                <value ext_kbd_enabled_1_09f8f280-dee2-11e0-9572-0800200c9a55="true"/>
+            </pref>
+            <pref>
+                <value type="bool"/>
+                <value settings_key_power_save_mode_suggestions_control="true"/>
+            </pref>
+            <pref>
+                <value settings_key_swipe_distance_threshold="140"/>
+                <value type="string"/>
+            </pref>
+            <pref>
+                <value settings_key_portrait_fullscreen="false"/>
+                <value type="bool"/>
             </pref>
             <pref>
                 <value ext_kbd_enabled_1_3659b9e0-dee2-11e0-9572-0800200c9a55="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
-                <value ext_kbd_enabled_1_d8657c90-d910-11e2-a28f-0800200c9a66="true"/>
+                <value settings_key_swipe_velocity_threshold="380"/>
+                <value type="string"/>
+            </pref>
+            <pref>
+                <value ext_kbd_enabled_1_d8657c90-d910-11e2-a28f-0800200c9a66="false"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -397,20 +361,36 @@
                 <value type="int"/>
             </pref>
             <pref>
+                <value type="bool"/>
+                <value use_custom_sound_volume="false"/>
+            </pref>
+            <pref>
+                <value type="string"/>
+                <value settings_key_multitap_timeout="700"/>
+            </pref>
+            <pref>
+                <value type="string"/>
+                <value settings_key_default_split_state_landscape="merged_always"/>
+            </pref>
+            <pref>
                 <value settings_key_quick_fix_second_disabled="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
-                <value settings_key_enable_shift_space_language_shortcut="true"/>
+                <value lang_key_shows_popup="false"/>
                 <value type="bool"/>
+            </pref>
+            <pref>
+                <value settings_key_always_hide_language_key="true"/>
+                <value type="bool"/>
+            </pref>
+            <pref>
+                <value settings_key_swipe_right_two_fingers_action="next_alphabet"/>
+                <value type="string"/>
             </pref>
             <pref>
                 <value settings_key_first_app_version_installed="7137"/>
                 <value type="int"/>
-            </pref>
-            <pref>
-                <value theme_79809d30-2919-4ae6-a9ec-94fd4bb6bd92="false"/>
-                <value type="bool"/>
             </pref>
             <pref>
                 <value type="bool"/>
@@ -436,6 +416,13 @@
         <pref>
             <pref>
                 <value locale="en"/>
+                <pref>
+                    <value word="mantis"/>
+                    <pref>
+                        <value nextWord="gamepad"/>
+                        <value usedCount="1"/>
+                    </pref>
+                </pref>
             </pref>
             <pref>
                 <value locale="fr"/>
