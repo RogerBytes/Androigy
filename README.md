@@ -107,10 +107,12 @@ En cours
 <details style="background-color: #222222; border: 1px solid #ccc; border-radius: 4px;">
 <summary>Afficher/Masquer</summary>
 
-1. Options de Kodi
-2. Options de RetroArch
+1. Options de RetroArch
+2. Options pour Mihon
 3. installeur windows batch
 4. Tuto réglage approfondi luckypatcher
+5. Voir l'installation de bundle tools pour installer en cli des apks
+6. Options de Pegasus
 
 </details>
 
