@@ -113,6 +113,7 @@ En cours
 4. Tuto réglage approfondi luckypatcher
 5. Voir l'installation de bundle tools pour installer en cli des apks
 6. Options de Pegasus
+7. Remplacer "oink oink" par money manager ex
 
 </details>
 
