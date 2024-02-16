@@ -58,6 +58,8 @@ Voici les prérequis pour pouvoir installer Androigy.
 - Avoir son smartphone connecté à l'ordinateur en USB
 - Bloquer Google Protect dans les options du play store
 
+- Avoir désactivé (ou désinstallé si possible), les applications : "Appareil Photo", "Aurora Droid", "Galerie", "Musique", "Navigateur"
+
 ### Téléchargement
 
 Depuis le terminal, on télécharge [la dernière release](https://github.com/RogerBytes/Androigy/releases/latest), la décompresse et on entre dans le dossier :
