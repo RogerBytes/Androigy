@@ -132,7 +132,48 @@ Aucun
 
 ### Observations
 
-RAS
+changer l'avertissement qui pointe vers repo barabbas
+
+Réglage des applications par défaut en premier
+Dire d'installer mantis (ou voir comment l'installer en CLI)
+
+Voir pourquoi le réglage clavier ne s'importe pas (ou s'il faut copier le repertoir android/data
+
+Tout le délire de raccourcis pour
+Magisk dans les options, en profiter pour 'Configurer Liste Exclusion"Google Play Services for AR" et "Google Play Jeux", Afficher les applications système et cocher "Google Assistant" "Google Play Store"
+Lucky Patcher - dans les options
+Sui - ouvrir les options dev
+LsPosed - depuis la notif
+
+Expliquer les widget a ajouter: 
+Geometric Weather
+Shazam
+
+3e page
+Agenda
+
+4e page
+ADBio
+WADBS
+
+Virer mantis mouse
+
+Dans la liste noire d'aurora ajouter
+Play Store
+OSS Scanneur au lieu d'OSS Scaner
+
+Bloquer les update dans le vrai play store (en haut à droite/paramètres/Préférences réseau//Mettre à jour automatiquement les applis/Ne pas mettre à jour automatiquement les applis'
+
+Installer play jeux depuis ple play store (en faire un backup depuis lucky patcher
+
+aussi en dehors de tout ça, il faut voir comment avoir la certif play protect
+
+Expliquer le changement de dns
+Paramètres/Réseau Internet/DNS privé/nom d'hôte du fournisseur DNS privé// et  taper :
+
+- Plus rapide / pistage moyen / sécurité -> dns.quad9.net
+- Moyen rapide / zéro pistage / 0 sécurité -> ns0.fdn.fr
+- Moyen rapide / pistage moyen / sécurité enfant et antiporn -> dns-dot.dnsforfamily.com
 
 </details>
 
