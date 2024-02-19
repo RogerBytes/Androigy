@@ -1,0 +1,49 @@
+Allez dans :
+Paramètres
+    Bibliothèque
+        Importer > Importer des plateformes
+
+Et indiquer le fichier "Android.json", si vous allez dans l'onglet "Applis" vous pouvez préciser que l'application est un jeu (certains jeux sont mal catégorisés)
+-> ainsi vos jeux android apparaissent dans les listes.
+Juste en dessous appliquez "Désactiver les avertissements" "Fusionner des éléments jouables" et "Toujours afficher l'icone de synchronisation" et "Mettre à jour les plateformes automatiquement"
+
+Ensuite pour le theme d'icone choisir Pop (ou pop mini si 4/3) dans
+Paramètres
+    Apparence
+        Télécharger pack de fond d'écran > Pop *ou* Pop Mini
+En dessous activer "Forcer le rapport d'aspect", "Couleur de thème auto" et "Masquer le titre", "Améliorer les noms" et "Utiliser l'horloge 24h"
+
+Ensuite les touches de navigation
+Paramètres
+    La navigation
+        Touche raccourci pour recherche -> Select
+        Touche raccourci des onglets -> Stick droit puis "Y"
+        Touche raccourci des plateformes -> L1 puis R1
+        Touche raccourci supplémentaire 1 -> Stick gauche
+        Touche raccourci supplémentaire 2 -> "X"
+Et enddesous activez "Onglet widget" et "Onglet Applis"
+
+Si vous avez un compte pour les retroachievements, profitez-en pour vous co, ça synchronisera vos records.
+
+Pour les consoles/plateformes que vous voulez ajouter :
+Paramètres
+    Bibliothèque
+        Télécharger des plateformes
+
+Maintenant dans l'onglet widget ajoutez
+- un raccourcis application "Mantis Gamepad Pro" (pour vos jeux android sans support manette natif)
+- Genre (pout vos favoris)
+- Activité - Continuer jeu (pour relancer le dernier jeu joué)
+- Retro Achievements (vos succès)
+- Retroarch (pour vos réglages d'émulation
+
+
+Ainsi pour résumer les commandes
+"X" Affiche le détail de jeux
+"L1" et "R1" permet de switcher les plateformes/consoles
+"Y" permet de basculer les onglets
+"Select" permet de faire une recherche
+"A" confirmer
+"B" annuler
+
+Meilleure frontend android sans hésiter, il reste juste voir si on peut préciser un dossier contenant les dossiers de rom (ce serait plus pratique).
