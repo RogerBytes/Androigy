@@ -8,7 +8,9 @@ prerequisites="- Avoir installé les outils adb sur votre ordinateur
 - Avoir activé les options développeur sur votre appareil android
 - Avoir activé le debug usb dans les options dévellopeur de votre appareil android
 - Avoir son smartphone connecté à l'ordinateur en USB
-- Bloquer Google Protect dans les options du play store"
+- Bloquer Google Protect dans les options du play store
+- \"Vérifier les applis via USB\" doit être désactiver dans les options développeur
+"
 author="RogerBytes"
 link="https://github.com/RogerBytes/Androigy/"
 from="https://github.com/RogerBytes/Androigy/releases"
@@ -26,7 +28,7 @@ Maintenez appuyez sur l'ecran pour faire apparaitre le meny et \"Paramètres de 
 Ouvrez Droidify, cliquez sur les trois points en haut à droite, allez dans \"Paramètres\", fait succéssivement \"Import Setting\" et \"Import Repoitories\" en pointant les fichiers \"droidify_settings.json\" et \"droidify_repos.json\".
 
 Configurez osmand
-\"Menu Burger\" et \"Paramètres\" et tout en bas importer d'un fichier, choisir \"osmand.osf\" dans \"Download\"
+\"Menu Burger\" et \"Paramètres\" et tout en bas importer d'un fichiser, choisir \"osmand.osf\" dans \"Download\"
 
 Configurer Anysoft Keyboard
 Ouvrez AnySoftKeyboard depuis Android, faites l'installation jusqu'a \"Et maintenannt\", \"choisissez \"Configurer tout le reste\" sans faire ce qu'il y a au dessus
