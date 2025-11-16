@@ -28,3 +28,23 @@ Zygisk_Next_v4-0.9.0__178-32931cf-release_.zip
 
 
 et aussi s'il faut des modules lsposed, il n'y a que lucky patcher pour l'instant
+
+
+
+-
+
+
+
+
+Voixci si cette parti est deja mise (j'ai un doute)
+Après le reboot relancez magisk et allez dans ses options (roue dentée en haut à droite) activez :
+
+DNS sur HTTPS
+Masquer l'application Magisk
+Fichier d'hôtes hors partition système
+Zygisk
+Authentification utilisateur
+
+
+Magisk-Modules-Repo/adb-ndk
+
