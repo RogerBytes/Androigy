@@ -22,6 +22,8 @@ Engagez-vous dans une expérience Android renouvelée avec \"$title\", où la li
 
 lastInfo=" Voici les réglages manuels que vous avez à faire :
 
+Attention pour le flux de lawnchair, il faut absolument mettre aidlbridge au lieu de Google.
+
 
 Ouvrez LP Installer. Faites l'installation et donner l'autorisation magisk qui pop.
 Quand le choix qui propose d'ouvrir l'appli (qui a un nom aléatoire) faites \"ouvrir\"
@@ -49,8 +51,6 @@ Applications par defaut dans parametres/Applications/Applis par défaut
 \"Gestion des apps par defaut\"
 Appli d'accueil : Lawnchair
 Appli de Navigateur : Vivaldi
-Appli de SMS : QKSMS
-Appli de telephone : Téléphone
 
 Se connecter à Davx5
 se co à agenda/ethar (avec caldav fruux)  https://dav.fruux.com
