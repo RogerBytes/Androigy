@@ -162,8 +162,7 @@ done
 adb push ./DATA/app/apks/*.apks /storage/emulated/0/Download/home/$USER_NAME/Local/apks/
 adb push ./DATA/app/xapk/*.xapk /storage/emulated/0/Download/home/$USER_NAME/Local/xapk/
 
-
-### Télécharger la ressource big files
+### Télécharger et transférer la ressource big files
 URL="https://github.com/RogerBytes/Androigy/releases/download/v0.0.1-data/big.files.tar.gz"
 TMP_DIR="/tmp/androigy_install"
 mkdir -p "$TMP_DIR"
@@ -175,24 +174,33 @@ curl -L "$URL" -o big.files.tar.gz
 echo "Extraction..."
 tar -xzf big.files.tar.gz
 
-# Copier les APK sur le téléphone
-if [ -d "apk" ]; then
+# Détecter les dossiers extraits
+APK_DIR=$(find . -type d -name "apk" | head -n 1)
+XAPK_DIR=$(find . -type d -name "xapk" | head -n 1)
+
+# Vérification des fichiers APK
+if [ -d "$APK_DIR" ] && [ "$(ls -A "$APK_DIR")" ]; then
   echo "Copie des APK vers le téléphone..."
-  adb push apk/*.apk "/storage/emulated/0/Download/home/$USER_NAME/Local/apk/"
+  adb push "$APK_DIR"/* "/storage/emulated/0/Download/home/$USER_NAME/Local/apk/"
+else
+  echo "Aucun fichier APK trouvé dans l'archive."
 fi
 
-# Copier les XAPK sur le téléphone
-if [ -d "xapk" ]; then
+# Vérification des fichiers XAPK
+if [ -d "$XAPK_DIR" ] && [ "$(ls -A "$XAPK_DIR")" ]; then
   echo "Copie des XAPK vers le téléphone..."
-  adb push xapk/*.xapk "/storage/emulated/0/Download/home/$USER_NAME/Local/xapk/"
+  adb push "$XAPK_DIR"/* "/storage/emulated/0/Download/home/$USER_NAME/Local/xapk/"
+else
+  echo "Aucun fichier XAPK trouvé dans l'archive."
 fi
 
-# Nettoyage final
+# Nettoyage temporaire
 cd ~ || exit
 rm -rf "$TMP_DIR"
 
 echo "Téléchargement et transfert terminés !"
 echo "Vous pouvez maintenant installer les fichiers sur le téléphone via une app compatible (Split APKs Installer, XAPK Installer, etc.)"
+
 
 echo "Installation terminée !"
 
