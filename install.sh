@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Téléchargement/décompression des paquets trop volmineux pour être dans le repo
-wget https://github.com/RogerBytes/Androigy/releases/download/v0.0.1-data/fatDATAAPK.tar.gz
-fatDATAAPK.tar.gz
-tar -xvf fatDATAAPK.tar.gz -C ./DATA/app/apk
-mv ./DATA/app/apk/fatDATAAPK/* ./DATA/app/apk/
-rm -r ./DATA/app/apk/fatDATAAPK/
-wget https://github.com/RogerBytes/Androigy/releases/download/v0.0.1-data/fatDATAAPK-PLAYSTORE.tar.gz
-tar -xvf fatDATAAPK-PLAYSTORE.tar.gz -C ./DATA/app/apk-playstore
-mv ./DATA/app/apk-playstore/fatDATAAPK-PLAYSTORE/* ./DATA/app/apk-playstore/
-rm -r ./DATA/app/apk-playstore/fatDATAAPK-PLAYSTORE/
-
 # Déclaration de Variables
 title="Androigy"
 target="Android 10+ ARMv8 (x64)"
