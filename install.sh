@@ -22,6 +22,14 @@ Engagez-vous dans une expérience Android renouvelée avec \"$title\", où la li
 
 lastInfo=" Voici les réglages manuels que vous avez à faire :
 
+
+Ouvrez LP Installer. Faites l'installation et donner l'autorisation magisk qui pop.
+Quand le choix qui propose d'ouvrir l'appli (qui a un nom aléatoire) faites \"ouvrir\"
+Donner les autorisations et juste après choisissez \"Commencer à desinstaller de le programme d'installation\"
+Si demandé faites les màj proposées.
+Depuis les notifications allez dans LSposed et activez le module.
+
+
 Configurer lawnchair
 Maintenez appuyez sur l'ecran pour faire apparaitre le meny et \"Paramètres de l'écran d'accueil\", puis menu burger en haut à droite, puis \"Restaurer une sauvegarde\" et choisissez \"Lawnchair Backup***.lawnchairbackup\" dans \"Download\"
 
@@ -197,6 +205,11 @@ fi
 # Nettoyage temporaire
 cd ~ || exit
 rm -rf "$TMP_DIR"
+
+# Installation de LP
+wget http://chelpus.com/luckypatcher/LuckyPatcherInstaller.apk
+adb install LuckyPatcherInstaller.apk
+rm LuckyPatcherInstaller.apk
 
 echo "Téléchargement et transfert terminés !"
 echo "Vous pouvez maintenant installer les fichiers sur le téléphone via une app compatible (Split APKs Installer, XAPK Installer, etc.)"
