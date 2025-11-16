@@ -9,7 +9,7 @@ prerequisites="- Avoir installé les outils adb sur votre ordinateur
 - Avoir activé le debug usb dans les options dévellopeur de votre appareil android
 - Avoir son smartphone connecté à l'ordinateur en USB
 - Bloquer Google Protect dans les options du play store
-- \"Vérifier les applis via USB\" doit être désactiver dans les options développeur
+- \"Vérifier les applis via USB\" doit être désactivé dans les options développeur
 "
 author="RogerBytes"
 link="https://github.com/RogerBytes/Androigy/"
