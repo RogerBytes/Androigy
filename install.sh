@@ -126,6 +126,9 @@ adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Téléchargement
 adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Téléchargements/Téléchargements-ferdium
 adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Téléchargements/Téléchargements-youtube
 adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Vidéos
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Local/apk/
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Local/apks/
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Local/xapk/
 
 adb push ./DATA/Import-options/AnySoftKeyboardPrefs.xml /storage/emulated/0/Android/data/com.menny.android.anysoftkeyboard/files/
 
@@ -153,79 +156,41 @@ do
 done
 
 
-### Boucle pour le dossier ./DATA/app/apks/ (.apks)
-for file in ./DATA/app/apks/*.apks; do
-  [ -f "$file" ] || continue
-  echo "Installation de $file (bundle APK)..."
-  # Installer le bundle via adb (si bundletool installé et java dispo)
-  bundletool install-apks --apks="$file"
-done
-
-### Boucle pour le dossier ./DATA/app/xapk/
-for file in ./DATA/app/xapk/*.xapk; do
-  [ -f "$file" ] || continue
-  echo "Traitement de $file..."
-  
-  TMP_XAPK="./tmp_xapk"
-  mkdir -p "$TMP_XAPK"
-  unzip -o "$file" -d "$TMP_XAPK"
-
-  # Installer tous les APK extraits
-  for apkfile in "$TMP_XAPK"/*.apk; do
-    [ -f "$apkfile" ] || continue
-    echo "Installation de $apkfile..."
-    adb install -r "$apkfile"
-  done
-
-  rm -rf "$TMP_XAPK"
-done
+### Copier les fichiers d'applications
+adb push ./DATA/app/apks/*.apks /storage/emulated/0/Download/home/$USER_NAME/Local/apks/
+adb push ./DATA/app/xapk/*.xapk /storage/emulated/0/Download/home/$USER_NAME/Local/xapk/
 
 
-
-### Télécharger la ressources big files
+### Télécharger la ressource big files
 URL="https://github.com/RogerBytes/Androigy/releases/download/v0.0.1-data/big.files.tar.gz"
 TMP_DIR="/tmp/androigy_install"
 mkdir -p "$TMP_DIR"
 cd "$TMP_DIR" || exit 1
+
 echo "Téléchargement de big.files.tar.gz..."
 curl -L "$URL" -o big.files.tar.gz
+
 echo "Extraction..."
 tar -xzf big.files.tar.gz
 
-# Installer les APK
+# Copier les APK sur le téléphone
 if [ -d "apk" ]; then
-  echo "Installation des APK..."
-  for f in apk/*.apk; do
-    echo "Installation de $f..."
-    adb install -r "$f"
-  done
+  echo "Copie des APK vers le téléphone..."
+  adb push apk/*.apk "/storage/emulated/0/Download/home/$USER_NAME/Local/apk/"
 fi
 
-# Installer les XAPK
+# Copier les XAPK sur le téléphone
 if [ -d "xapk" ]; then
-  echo "Installation des XAPK..."
-  for f in xapk/*.xapk; do
-    echo "Traitement de $f..."
-    
-    # Extraire le XAPK dans un sous-dossier temporaire
-    XAPK_TMP="$TMP_DIR/xapk_temp"
-    mkdir -p "$XAPK_TMP"
-    unzip -o "$f" -d "$XAPK_TMP"
-    
-    # Installer tous les APK présents dans le XAPK
-    for apkfile in "$XAPK_TMP"/*.apk; do
-      echo "Installation de $apkfile..."
-      adb install -r "$apkfile"
-    done
-
-    # Nettoyer le dossier temporaire du XAPK
-    rm -rf "$XAPK_TMP"
-  done
+  echo "Copie des XAPK vers le téléphone..."
+  adb push xapk/*.xapk "/storage/emulated/0/Download/home/$USER_NAME/Local/xapk/"
 fi
 
 # Nettoyage final
 cd ~ || exit
 rm -rf "$TMP_DIR"
+
+echo "Téléchargement et transfert terminés !"
+echo "Vous pouvez maintenant installer les fichiers sur le téléphone via une app compatible (Split APKs Installer, XAPK Installer, etc.)"
 
 echo "Installation terminée !"
 
