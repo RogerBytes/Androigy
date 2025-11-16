@@ -1,0 +1,209 @@
+{
+  "packages": [
+    {
+      "id": "at.bitfire.davdroid",
+      "name": "DAVx⁵"
+    },
+    {
+      "id": "org.fairscan.app",
+      "name": "FairScan"
+    },
+    {
+      "id": "com.menny.android.anysoftkeyboard",
+      "name": "AnySoftKeyboard"
+    },
+    {
+      "id": "com.anysoftkeyboard.languagepack.french",
+      "name": "French for AnySoftKeyboard"
+    },
+    {
+      "id": "at.tomtasche.reader",
+      "name": "OpenDocument Reader"
+    },
+    {
+      "id": "com.atharok.barcodescanner",
+      "name": "Barcode Scanner"
+    },
+    {
+      "id": "com.aurora.store",
+      "name": "Aurora Store"
+    },
+    {
+      "id": "com.beemdevelopment.aegis",
+      "name": "Aegis Authenticator"
+    },
+    {
+      "id": "com.carriez.flutter_hbb",
+      "name": "RustDesk"
+    },
+    {
+      "id": "com.artifex.mupdf.mini.app",
+      "name": "MuPDF mini"
+    },
+    {
+      "id": "com.foxdebug.acode",
+      "name": "Acode editor"
+    },
+    {
+      "id": "org.y20k.transistor",
+      "name": "Transistor Radio"
+    },
+    {
+      "id": "com.kgurgul.cpuinfo",
+      "name": "CPU Info"
+    },
+    {
+      "id": "org.mozilla.fennec_fdroid",
+      "name": "Fennec F-Droid"
+    },
+    {
+      "id": "com.kunzisoft.keepass.libre",
+      "name": "KeePassDX"
+    },
+    {
+      "id": "com.limelight",
+      "name": "Moonlight Game Streaming"
+    },
+    {
+      "id": "com.looker.droidify",
+      "name": "Droid-ify"
+    },
+    {
+      "id": "com.money.manager.ex",
+      "name": "Money Manager Ex"
+    },
+    {
+      "id": "com.nunti",
+      "name": "Nunti"
+    },
+    {
+      "id": "com.termux",
+      "name": "Termux"
+    },
+    {
+      "id": "com.termux.api",
+    "name": "Termux:API"
+    },
+    {
+      "id": "com.termux.nix",
+      "name": "Termux Nix-on-Droid"
+    },
+    {
+      "id": "com.termux.styling",
+      "name": "Termux:Styling"
+    },
+    {
+      "id": "com.termux.widget",
+      "name": "Termux:Widget"
+    },
+    {
+      "id": "com.termux.window",
+      "name": "Termux:Float"
+    },
+    {
+      "id": "com.vonglasow.michael.satstat",
+      "name": "SatStat"
+    },
+    {
+      "id": "dev.anilbeesetti.nextplayer",
+      "name": "Next Player"
+    },
+    {
+      "id": "org.fossify.gallery",
+      "name": "Fossify Gallery"
+    },
+    {
+      "id": "org.fossify.calendar",
+      "name": "Fossify Calendar"
+    },
+    {
+      "id": "org.fossify.musicplayer",
+      "name": "Fossify Music Player"
+    },
+    {
+      "id": "org.fossify.notes",
+      "name": "Fossify Notes Beta"
+    },
+    {
+      "id": "org.fossify.paint",
+      "name": "Fossify Paint"
+    },
+    {
+      "id": "org.koreader.launcher.fdroid",
+      "name": "KOReader"
+    },
+    {
+      "id": "io.element.android.x",
+      "name": "Element X"
+    },
+    {
+      "id": "io.github.muntashirakon.AppManager",
+      "name": "App Manager"
+    },
+    {
+      "id": "net.thunderbird.android",
+      "name": "Thunderbird"
+    },
+    {
+      "id": "me.hackerchick.catima",
+      "name": "Catima"
+    },
+    {
+      "id": "me.zhanghai.android.files",
+      "name": "Material Files"
+    },
+    {
+      "id": "com.amanoteam.kahon",
+      "name": "Kahon"
+    },
+    {
+      "id": "com.dergoogler.mmrl",
+      "name": "MMRL"
+    },
+    {
+      "id": "net.osmand.plus",
+      "name": "OsmAnd"
+    },
+    {
+      "id": "org.adaway",
+      "name": "AdAway"
+    },
+    {
+      "id": "org.kde.kdeconnect_tp",
+      "name": "KDE Connect"
+    },
+    {
+      "id": "org.lichess.mobileapp.free",
+      "name": "lichess"
+    },
+    {
+      "id": "com.vovagorodok.blichess",
+      "name": "Blichess"
+    },
+    {
+      "id": "org.proninyaroslav.libretorrent",
+      "name": "LibreTorrent"
+    },
+    {
+      "id": "org.polymorphicshade.tubular",
+      "name": "Tubular"
+    },
+    {
+      "id": "org.xbmc.kodi",
+      "name": "Kodi"
+    },
+    {
+      "id": "com.retroarch",
+      "name": "RetroArch"
+    },
+    {
+      "id": "org.breezyweather",
+      "name": "Breezy Weather"
+    },
+    {
+      "id": "xyz.myachin.saveto",
+      "name": "SaveTo"
+    }
+  ]
+}
+

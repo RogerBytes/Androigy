@@ -12,7 +12,7 @@ mv ./DATA/app/apk-playstore/fatDATAAPK-PLAYSTORE/* ./DATA/app/apk-playstore/
 rm -r ./DATA/app/apk-playstore/fatDATAAPK-PLAYSTORE/
 
 # Déclaration de Variables
-title="Alienage Suite"
+title="Androigy"
 target="Android 10+ ARMv8 (x64)"
 recommanded="Lineage OS"
 prerequisites="- Avoir installé les outils adb sur votre ordinateur
@@ -20,9 +20,9 @@ prerequisites="- Avoir installé les outils adb sur votre ordinateur
 - Avoir activé le debug usb dans les options dévellopeur de votre appareil android
 - Avoir son smartphone connecté à l'ordinateur en USB
 - Bloquer Google Protect dans les options du play store"
-author="B4rabbas"
-link="https://github.com/B4rabbas/Alienage-Suite/"
-from="https://github.com/B4rabbas/Alienage-Suite/releases"
+author="RogerBytes"
+link="https://github.com/RogerBytes/Androigy/"
+from="https://github.com/RogerBytes/Androigy/releases"
 warning="Ne pas poursuivre l'installation si l'archive ne provient pas de $from !"
 description="\"$title\" est une suite applicative pour android 10+ armv8.
 L'objectif est de simplifier l'expérience Android tout en utilisant des applications majoritairement open source.
@@ -118,6 +118,50 @@ function goodbye {
 
 ## Messages
 greeting "$title - Installation" "$warning" "$target" "$recommanded" "$prerequisites" "$description" "$from" "$author"
+
+
+# Telecharger les app fdroid depuis fdroid-packages.json
+
+OUT=$(mktemp -d)
+
+# Lire le JSON et extraire la liste des paquets
+packages=$(jq -c '.packages[]' DATA/fdroid-packages.json)
+
+while IFS= read -r pkg; do
+  pkg_id=$(echo "$pkg" | jq -r '.id')
+  pkg_name=$(echo "$pkg" | jq -r '.name')
+  echo "==> Traitement : $pkg_name ($pkg_id)"
+
+  # Essayer via l'API
+  json=$(curl -s "https://f-droid.org/api/v1/packages/$pkg_id")
+  apk_name=$(echo "$json" | jq -r '.packages[-1].apkName')
+
+  # Si rien via l'API, tenter le scraping HTML
+  if [[ -z "$apk_name" || "$apk_name" == "null" ]]; then
+    echo "  !! Aucun APK trouvé via l'API pour $pkg_id, tentative scraping HTML"
+    page=$(curl -s "https://f-droid.org/packages/$pkg_id/")
+    apk_name=$(echo "$page" | grep -Eo '/repo/[^"]+\.apk' | head -n 1 | sed 's|/repo/||')
+    if [[ -z "$apk_name" ]]; then
+      echo "  !! Impossible de trouver un APK pour $pkg_id"
+      continue
+    fi
+  fi
+
+  url="https://f-droid.org/repo/$apk_name"
+  dest="$OUT/$(basename "$apk_name")"
+
+  echo "  Téléchargement : $url"
+  curl -L "$url" -o "$dest"
+
+  echo "  → OK : $dest"
+  adb install -r "$dest"
+  rm "$dest"
+  echo "  → installation de $dest terminée."
+done <<< "$packages"
+
+rm -rf "$OUT"
+echo "→ Tous les fichiers temporaires ont été supprimés."
+
 
 ## Création de dossiers
 adb shell mkdir /storage/emulated/0/Download/Documents
