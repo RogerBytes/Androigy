@@ -119,67 +119,25 @@ function goodbye {
 ## Messages
 greeting "$title - Installation" "$warning" "$target" "$recommanded" "$prerequisites" "$description" "$from" "$author"
 
-
-# Telecharger les app fdroid depuis fdroid-packages.json
-
-OUT=$(mktemp -d)
-
-# Lire le JSON et extraire la liste des paquets
-packages=$(jq -c '.packages[]' DATA/fdroid-packages.json)
-
-while IFS= read -r pkg; do
-  pkg_id=$(echo "$pkg" | jq -r '.id')
-  pkg_name=$(echo "$pkg" | jq -r '.name')
-  echo "==> Traitement : $pkg_name ($pkg_id)"
-
-  # Essayer via l'API
-  json=$(curl -s "https://f-droid.org/api/v1/packages/$pkg_id")
-  apk_name=$(echo "$json" | jq -r '.packages[-1].apkName')
-
-  # Si rien via l'API, tenter le scraping HTML
-  if [[ -z "$apk_name" || "$apk_name" == "null" ]]; then
-    echo "  !! Aucun APK trouvé via l'API pour $pkg_id, tentative scraping HTML"
-    page=$(curl -s "https://f-droid.org/packages/$pkg_id/")
-    apk_name=$(echo "$page" | grep -Eo '/repo/[^"]+\.apk' | head -n 1 | sed 's|/repo/||')
-    if [[ -z "$apk_name" ]]; then
-      echo "  !! Impossible de trouver un APK pour $pkg_id"
-      continue
-    fi
-  fi
-
-  url="https://f-droid.org/repo/$apk_name"
-  dest="$OUT/$(basename "$apk_name")"
-
-  echo "  Téléchargement : $url"
-  curl -L "$url" -o "$dest"
-
-  echo "  → OK : $dest"
-  adb install -r "$dest"
-  rm "$dest"
-  echo "  → installation de $dest terminée."
-done <<< "$packages"
-
-rm -rf "$OUT"
-echo "→ Tous les fichiers temporaires ont été supprimés."
-
-
 ## Création de dossiers
-adb shell mkdir /storage/emulated/0/Download/Documents
-adb shell mkdir /storage/emulated/0/Download/Jeux
-adb shell mkdir /storage/emulated/0/Download/Jeux/EmulatorData
-adb shell mkdir /storage/emulated/0/Download/Jeux/Rom
-adb shell mkdir /storage/emulated/0/Download/Images
-adb shell mkdir /storage/emulated/0/Download/Local
-adb shell mkdir /storage/emulated/0/Download/Modèles
-adb shell mkdir /storage/emulated/0/Download/Musique
-adb shell mkdir /storage/emulated/0/Download/Public
-adb shell mkdir -p /storage/emulated/0/Download/Téléchargements/Téléchargements-navigateur
-adb shell mkdir -p /storage/emulated/0/Download/Téléchargements/Téléchargements-jd2
-adb shell mkdir -p /storage/emulated/0/Download/Téléchargements/Téléchargements-torrent
-adb shell mkdir -p /storage/emulated/0/Download/Téléchargements/Téléchargements-mail
-adb shell mkdir -p /storage/emulated/0/Download/Téléchargements/Téléchargements-ferdium
-adb shell mkdir -p /storage/emulated/0/Download/Téléchargements/Téléchargements-youtube
-adb shell mkdir -p /storage/emulated/0/Download/Vidéos
+USER_NAME="$(whoami)"
+
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Documents
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Jeux/EmulatorData
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Jeux/Rom
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Images
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Local
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Modèles
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Musique
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Public
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Téléchargements/Téléchargements-navigateur
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Téléchargements/Téléchargements-jd2
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Téléchargements/Téléchargements-torrent
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Téléchargements/Téléchargements-mail
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Téléchargements/Téléchargements-ferdium
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Téléchargements/Téléchargements-youtube
+adb shell mkdir -p /storage/emulated/0/Download/home/$USER_NAME/Vidéos
+
 adb push ./DATA/Import-options/AnySoftKeyboardPrefs.xml /storage/emulated/0/Android/data/com.menny.android.anysoftkeyboard/files/
 
 ## Copie de fichiers
@@ -188,13 +146,11 @@ adb push ./DATA/Pictures/. /storage/emulated/0/Pictures/
 adb push ./DATA/Import-options/. /storage/emulated/0/Download/
 adb push ./DATA/Ringtones/. /storage/emulated/0/Ringtones/
 
-## Installation d'apk via une bloucle for
-### Boucle pour le dossier ./DATA/app/apk/
-for file in ./DATA/app/apk/*
-do
-  adb install $file
-done
 
+## installer les paquets fdroid et les telecharger
+./DATA/scripts/apk-fdroid.sh
+
+## Installation d'apk via une bloucle for
 ### Boucle pour le dossier ./DATA/app/apk-demo/
 for file in ./DATA/app/apk-demo/*
 do
@@ -207,11 +163,82 @@ do
   adb install $file
 done
 
-## Installation d'apk multiple (aucun à part l'exemple désactivé)
-## adb install-multiple -r ~\androidclean\apks\splitted\ali\com.alibaba.aliexpresshd.apk ~\desktop\androidclean\apks\splitted\ali\config.arm64_v8a.apk ~\desktop\androidclean\apks\splitted\ali\config.fr.apk ~\desktop\androidclean\apks\splitted\ali\config.xxhdpi.apk
+
+### Boucle pour le dossier ./DATA/app/apks/ (.apks)
+for file in ./DATA/app/apks/*.apks; do
+  [ -f "$file" ] || continue
+  echo "Installation de $file (bundle APK)..."
+  # Installer le bundle via adb (si bundletool installé et java dispo)
+  bundletool install-apks --apks="$file"
+done
+
+### Boucle pour le dossier ./DATA/app/xapk/
+for file in ./DATA/app/xapk/*.xapk; do
+  [ -f "$file" ] || continue
+  echo "Traitement de $file..."
+  
+  TMP_XAPK="./tmp_xapk"
+  mkdir -p "$TMP_XAPK"
+  unzip -o "$file" -d "$TMP_XAPK"
+
+  # Installer tous les APK extraits
+  for apkfile in "$TMP_XAPK"/*.apk; do
+    [ -f "$apkfile" ] || continue
+    echo "Installation de $apkfile..."
+    adb install -r "$apkfile"
+  done
+
+  rm -rf "$TMP_XAPK"
+done
 
 
 
+### Télécharger la ressources big files
+URL="https://github.com/RogerBytes/Androigy/releases/download/v0.0.1-data/big.files.tar.gz"
+TMP_DIR="/tmp/androigy_install"
+mkdir -p "$TMP_DIR"
+cd "$TMP_DIR" || exit 1
+echo "Téléchargement de big.files.tar.gz..."
+curl -L "$URL" -o big.files.tar.gz
+echo "Extraction..."
+tar -xzf big.files.tar.gz
+
+# Installer les APK
+if [ -d "apk" ]; then
+  echo "Installation des APK..."
+  for f in apk/*.apk; do
+    echo "Installation de $f..."
+    adb install -r "$f"
+  done
+fi
+
+# Installer les XAPK
+if [ -d "xapk" ]; then
+  echo "Installation des XAPK..."
+  for f in xapk/*.xapk; do
+    echo "Traitement de $f..."
+    
+    # Extraire le XAPK dans un sous-dossier temporaire
+    XAPK_TMP="$TMP_DIR/xapk_temp"
+    mkdir -p "$XAPK_TMP"
+    unzip -o "$f" -d "$XAPK_TMP"
+    
+    # Installer tous les APK présents dans le XAPK
+    for apkfile in "$XAPK_TMP"/*.apk; do
+      echo "Installation de $apkfile..."
+      adb install -r "$apkfile"
+    done
+
+    # Nettoyer le dossier temporaire du XAPK
+    rm -rf "$XAPK_TMP"
+  done
+fi
+
+# Nettoyage final
+cd ~ || exit
+rm -rf "$TMP_DIR"
+
+echo "Installation terminée !"
 
 
 # __________________________________________________________
