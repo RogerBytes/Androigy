@@ -35,7 +35,7 @@ Depuis les notifications allez dans LSposed et activez le module.
 Configurer lawnchair
 Maintenez appuyez sur l'ecran pour faire apparaitre le meny et \"Paramètres de l'écran d'accueil\", puis menu burger en haut à droite, puis \"Restaurer une sauvegarde\" et choisissez \"Lawnchair Backup***.lawnchairbackup\" dans \"Download\"
 
-Ouvrez Droidify, cliquez sur les trois points en haut à droite, allez dans \"Paramètres\", fait succéssivement \"Import Setting\" et \"Import Repoitories\" en pointant les fichiers \"droidify_settings.json\" et \"droidify_repos.json\".
+droididy osef tioer de l'import
 
 Configurez osmand
 \"Menu Burger\" et \"Paramètres\" et tout en bas importer d'un fichiser, choisir \"osmand.osf\" dans \"Download\"
@@ -54,8 +54,6 @@ Appli de Navigateur : Vivaldi
 
 Se connecter à Davx5
 se co à agenda/ethar (avec caldav fruux)  https://dav.fruux.com
-
-Ouvrir MiXplorer et allez dans \"Downloads\" et cliquez sur \"MiXplorer_10_01_2024_18-15-39.mic\" ouvrez avec \"importer\"
 
 Ouvrez Météo et ajoutez votre ville, glissez là en heut.
 Connectez vous à Element/messenger/whatsapp
